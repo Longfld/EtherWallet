@@ -1,0 +1,27 @@
+<h1>
+
+    My Ethereum Wallet run by Angular 4 with Electron</h1>
+
+<h2>My Wallet</h2>
+<form [formGroup]="form">
+    <h3>Wallet</h3>
+    Address :
+    <input formControlName="myaddress" type="text"  />
+    <button (click)="getMine()">Get Balance</button>
+    <br/>
+    <h3>My Mnemonic Phrase</h3>
+
+    Phrase :
+    <input formControlName="myphrase" type="text" myphrase />
+    <button (click)="getM()" >Get Balance</button>
+
+    <br />
+    <h3>My Brian Wallet</h3>
+    UserName:
+    <input formControlName="username" type="text" username /> password:
+    <input formControlName="pwd" type="text" pwd />
+    <button (click)="getBrian()">Get Balance</button>
+    <br />
+    <input formControlName="Address" type="text" />
+    <input formControlName="Balance" type="text" />
+</form>
