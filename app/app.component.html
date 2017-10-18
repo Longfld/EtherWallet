@@ -1,28 +1,28 @@
-<h1>
+<h1>Wallet run by Angular 4 with Electron</h1>
 
-    My Ethereum Wallet run by Angular 4 with Electron</h1>
 
-<h2>My Wallet</h2>
 <form [formGroup]="form">
-    <h3>Wallet</h3>
-    Address :
-    <input formControlName="myaddress" type="text"  />
-    <button (click)="getMine()">Get Balance</button>
+    <mat-tab-group>
+        <mat-tab label="My Wallet">
+            <input formControlName="myaddress" type="text" matInput placeholder="Address" />
+            <button mat-raised-button color="primary" (click)="getMine()">Get Balance</button>
+        </mat-tab>
+        <mat-tab label="My Mnemonic Phrase">
+            <input formControlName="myphrase" type="text" matInput placeholder="Phrase" />
+            <button mat-raised-button color="primary" (click)="getM()">Get Balance</button>
+        </mat-tab>
+        <mat-tab label="My Brian Wallet">
+            <input formControlName="username" type="text" matInput placeholder="UserName" /> password:
+            <input formControlName="pwd" type="text" pwd />
+            <button mat-raised-button color="primary" (click)="getBrian()">Get Balance</button>
+        </mat-tab>
+        <mat-tab label="Setting">
+            which provider?
+        </mat-tab>
+    </mat-tab-group>
     <br/>
-    <h3>My Mnemonic Phrase</h3>
-
-    Phrase :
-    <input formControlName="myphrase" type="text" myphrase />
-    <button (click)="getM()" >Get Balance</button>
-
-    <br />
-    <h3>My Brian Wallet</h3>
-    UserName:
-    <input formControlName="username" type="text" username /> password:
-    <input formControlName="pwd" type="text" pwd />
-    <button (click)="getBrian()">Get Balance</button>
-    <br />
-    Address: <input formControlName="address" type="text" />
-    Balance: <input formControlName="balance" type="text" />
+    Wallet Content
+    <br/>
+    <input formControlName="address" type="text" matInput placeholder="Address" disabled />
+    <input formControlName="balance" type="text" matInput placeholder="Balance" disabled />
 </form>
-<br />
