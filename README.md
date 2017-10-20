@@ -5,7 +5,7 @@ Ether wallet by angular and run on electron.
 
   not completed, but if you want to have a look:
 
-           
+          Make sure nodejs has been installed or get from here :https://nodejs.org/en/download/ 
           After download
 
           npm install
