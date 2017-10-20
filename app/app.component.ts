@@ -34,8 +34,8 @@ export class AppComponent {
       myphrase: new FormControl("radar blur cabbage chef fix engine embark joy scheme fiction master release"),
       username: new FormControl("support@ethers.io"),
       pwd: new FormControl("password123"),
-      address: new FormControl(""),
-      balance: new FormControl(""),
+      address: new FormControl({value:"",disabled:true}),
+      balance: new FormControl({value:"",disabled:true}),
     });
   }
 
@@ -44,7 +44,6 @@ export class AppComponent {
     let privateKey = "0x0123456789012345678901234567890123456789012345678901234567890123";
     let mywallet = new this.Wallet(privateKey);
     console.log("privateKey: " + mywallet.privateKey);
-    //this.GetBalance(mywallet.address);
     this.GetBalance(mywallet.address);
    
   }
