@@ -1,28 +1,63 @@
-<h1>Ethereum Wallet run by Angular 4 with Electron</h1>
+<div class="container">
+    <div class="jumbotron">
+        <h2>Ethereum Wallet run by Angular 4 with Electron</h2>
+    </div>
+    <div class="row">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a href="#wallet1" data-toggle="tab" role="tab" class="nav-link small text-uppercase">My Wallet</a>
+            </li>
+            <li class="nav-item">
+                <a href="#setting1" data-toggle="tab" role="tab" class="nav-link small text-uppercase">Setting</a>
+            </li>
+        </ul>
+    </div>
 
+    <div class="tab-content">
+        <div id="wallet1" role="tabpanel" class="tab-pane active">
+            <form [formGroup]="form">
 
-<form [formGroup]="form">
-    <mat-tab-group>
-        <mat-tab label="My Wallet">
-            <input formControlName="myaddress" type="text" matInput placeholder="Address" />
-            <button mat-raised-button color="primary" (click)="getMine()">Get Balance</button>
-        </mat-tab>
-        <mat-tab label="My Mnemonic Phrase">
-            <input formControlName="myphrase" type="text" matInput placeholder="Phrase" />
-            <button mat-raised-button color="primary" (click)="getM()">Get Balance</button>
-        </mat-tab>
-        <mat-tab label="My Brian Wallet">
-            <input formControlName="username" type="text" matInput placeholder="UserName" /> password:
-            <input formControlName="pwd" type="text" pwd />
-            <button mat-raised-button color="primary" (click)="getBrian()">Get Balance</button>
-        </mat-tab>
-        <mat-tab label="Setting">
-            which provider?
-        </mat-tab>
-    </mat-tab-group>
-    <br/>
-    Wallet Content
-    <br/>
-    <input formControlName="address" type="text" matInput placeholder="Address" disabled />
-    <input formControlName="balance" type="text" matInput placeholder="Balance" disabled />
-</form>
+                <div class="row">
+                    <label class="col-md-2">My Address</label>
+                    <div class="col-md-2">
+                        <input formControlName="myaddress" type="text" class="form-control" placeholder="Address" />
+                    </div>
+                    <button mat-raised-button color="primary" (click)="getMine()">Get Balance</button>
+                </div>
+                <div class="row">
+                    <p> My Mnemonic Phrase</p>
+                </div>
+                <div class="row">
+                    <label class="col-md-2">My Phrase</label>
+                    <input formControlName="myphrase" type="text" class="form-control col-md-4" placeholder="Phrase" />
+                    <button mat-raised-button color="primary" (click)="getM()">Get Balance</button>
+                </div>
+                <div class="row">
+                    <p>My Brian Wallet</p>
+                </div>
+                <div class="row">
+                    <label class="col-md-2">User Name</label>
+                    <input formControlName="username" type="text" class="form-control col-md-2" placeholder="UserName" />
+                    <label class="col-md-2">Password</label>
+                    <input formControlName="pwd" type="text" pwd />
+                </div>
+                <div class="row">
+                    <button mat-raised-button color="primary" (click)="getBrian()">Get Balance</button>
+                </div>
+                <div class="row">
+                    <label>Balance:</label>
+                </div>
+                <div class="row">
+                    <label class="col-md-2">Address</label>
+                    <input formControlName="address" type="text" class="form-control col-md-2" placeholder="Address" />
+                    <label class="col-md-2">Balance</label>
+                    <input formControlName="balance" type="text" class="form-control col-md-2" placeholder="Balance"
+                    />
+                </div>
+            </form>
+        </div>
+        <div id="setting1" class="tab-pane fade" role="tabpanel">
+            which provider? Wallet Content
+        </div>
+    </div>
+</div>
