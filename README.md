@@ -2,6 +2,7 @@
 
 
 Ether wallet by angular and run on electron.
+You know what? Nobody can hijack you now! 
 
   not completed, but if you want to have a look:
 
