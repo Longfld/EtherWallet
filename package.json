@@ -36,7 +36,7 @@
     "@types/node": "6.0.46",
     "concurrently": "3.2.0",
     "typescript": "2.6.1",
-    "electron": "3.0.3",
+    "electron": "3.0.3"
   }
 }
 
